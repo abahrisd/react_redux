@@ -1,4 +1,6 @@
 import React, {Component, PropTypes} from 'react'
+import { connect } from 'react-redux'
+import {increment} from '../AC/counter'
 
 class Counter extends Component {
     static propTypes = {
@@ -23,4 +25,9 @@ class Counter extends Component {
 
 }
 
-export default Counter
+//get data from store, dispatch and subcribe
+//in second argument - action creators
+export default connect((state) => {
+    const {counter} = state;
+    return {count: counter}
+}, {increment})(Counter)
