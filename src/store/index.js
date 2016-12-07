@@ -1,14 +1,6 @@
 import { createStore } from 'redux'
-import {INCREMENT} from '../constants'
+import counter from '../reducer/counter'
 
-function reducer(state = 0, action){
-    const {type, data} = action;
-    return type === INCREMENT ? state +1 : state;
-
-}
-
-const store = createStore(reducer);
+const store = createStore(counter);
 
 export default store
-
-window.store = store
