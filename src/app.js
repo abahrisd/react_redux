@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import Root from './containers/Root'
 import store from './store'
-import { increment } from './AC/counter'
+//import { increment } from './AC/counter'
 
 window.store = store
 
